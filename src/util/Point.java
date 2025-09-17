@@ -7,4 +7,11 @@ public class Point {
         this.x = x;
         this.y = y;
     }
+
+    public Point normalize(double length, Point origin) {
+        return new Point(
+                (x - origin.x) / length,
+                (y - origin.y) / length
+        );
+    }
 }
